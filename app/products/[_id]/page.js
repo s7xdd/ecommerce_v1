@@ -138,9 +138,9 @@ const Product = () => {
                     {product?.description}
                   </p>
                   <p className="inline-block mb-8 text-4xl font-bold text-gray-700  ">
-                    <span>₹ {product?.price}</span>
+                    <span>AED {product?.price}</span>
                     <span className="text-base font-normal text-gray-500 line-through  mx-1">
-                      ₹ {product?.price * 3}
+                      AED {product?.price * 1.2}
                     </span>
                   </p>
                 </div>

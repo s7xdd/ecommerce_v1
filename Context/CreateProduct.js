@@ -1,13 +1,7 @@
 "use client";
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import {
-  getStorage,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/storage";
-import { app } from "./Firebase";
+import { uploadFile } from '@uploadcare/upload-client'
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
@@ -21,44 +15,35 @@ export const ProductContextProvider = ({ children }) => {
   const [file, setFile] = useState(null);
   const [media, setMedia] = useState("");
   const [uploading, setUploading] = useState(false);
-  const storage = getStorage(app);
   const route = useRouter();
 
   const [products, setProducts] = useState([]);
 
   // upload image
   useEffect(() => {
-    const upload = () => {
+    const upload = async () => {
       setUploading(true);
       const name = new Date().getTime() + "-" + file.name;
-      const storageRef = ref(storage, name);
-
-      const uploadTask = uploadBytesResumable(storageRef, file);
-
-      uploadTask.on(
-        "state_changed",
-        (snapshot) => {
-          const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log("Upload is " + progress + "% done");
-          switch (snapshot.state) {
-            case "paused":
-              console.log("Upload is paused");
-              break;
-            case "running":
-              console.log("Upload is running");
-              break;
+      
+      const result = await uploadFile(
+        file,
+        {
+          publicKey: 'b9d4fbc0e983b3afa149',
+          store: 'auto',
+          metadata: {
+            subsystem: 'js-client',
+            pet: 'cat'
           }
-        },
-        (error) => {},
-        () => {
-          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            setMedia(downloadURL);
-            setUploading(false);
-          });
         }
-      );
-    };
+      )
+
+      const downloadURL = `https://ucarecdn.com/${result.uuid}/`
+
+      setMedia(downloadURL);
+      setUploading(false);
+
+    
+    }
 
     file && upload();
   }, [file]);

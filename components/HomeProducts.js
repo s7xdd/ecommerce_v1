@@ -46,7 +46,7 @@ const HomeProducts = ({ show }) => {
                         {product?.name}
                       </h3>
                       <p className="mt-1 text-lg font-medium text-gray-900">
-                        ₹{product?.price}
+                        AED {product?.price}
                       </p>
                     </Link>
                   ))
@@ -70,7 +70,7 @@ const HomeProducts = ({ show }) => {
                       {product?.name}
                     </h3>
                     <p className="mt-1 text-lg font-medium text-gray-900">
-                      ₹{product?.price}
+                      AED {product?.price}
                     </p>
                   </Link>
                 ))}
