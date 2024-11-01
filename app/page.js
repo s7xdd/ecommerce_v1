@@ -11,7 +11,7 @@ export default function Home() {
       <HeroBanner />
       <Collection />
       <span className="text-2xl font-bold text-center mt-10 mb-10">
-        Recent Products List
+        Trending Products
       </span>
       <HomeProducts show={show} />
     </div>
