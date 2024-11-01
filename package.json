@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce_v1",
+  "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,27 +10,28 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
-    "@headlessui/react": "^2.2.0",
-    "@heroicons/react": "^2.1.5",
-    "axios": "^1.7.7",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.1.1",
+    "axios": "^1.6.2",
     "bcrypt": "^5.1.1",
-    "chart.js": "^4.4.6",
-    "firebase": "^11.0.1",
+    "chart.js": "^4.4.1",
+    "firebase": "^10.7.1",
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
-    "mongoose": "^8.8.0",
-    "next": "15.0.2",
-    "nextjs-toploader": "^3.7.15",
-    "react": "19.0.0-rc-02c0e824-20241028",
+    "mongoose": "^8.0.3",
+    "next": "14.0.4",
+    "nextjs-toploader": "^1.6.4",
+    "react": "^18",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
-    "react-icons": "^5.3.0"
+    "react-icons": "^4.12.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "15.0.2",
+    "eslint-config-next": "14.0.4",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.3.0"
   }
 }
