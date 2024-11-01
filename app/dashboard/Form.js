@@ -94,7 +94,7 @@ const Form = () => {
             name="price"
             className="w-full border  border-gray-300 p-2 rounded-md mt-2"
             required
-            placeholder="Enter product price in ₹"
+            placeholder="Enter product price in AED"
             value={price}
             onChange={handleChange}
           />
@@ -155,7 +155,7 @@ const Form = () => {
             uploading ? (
               <div className="w-full">
                 <span className="w-full h-32 flex items-center justify-center text-gray-600 font-semibold">
-                  please wait while image is uploading....
+                  Please wait while image is uploading....
                 </span>
               </div>
             ) : (
