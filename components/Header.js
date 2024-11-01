@@ -23,7 +23,7 @@ const Header = () => {
     fetchCategories();
   }, []);
   return (
-    <div className="w-full relative">
+    <div className="w-full fixed top-0 z-50">
       <header className="bg-white ">
         <div className="mx-auto flex h-16 max-w-screen-2xl items-center gap-8 px-4 sm:px-6 lg:px-8">
           <Link className="block text-teal-600" href="/">
