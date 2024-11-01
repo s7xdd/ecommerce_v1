@@ -17,7 +17,7 @@ const Login = () => {
   return (
     <div>
       <section className="relative flex flex-wrap lg:h-screen lg:items-center">
-        <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+        <div className="w-full flex flex-col justify-center items-center gap-2 px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-lg text-center">
             <h1 className="text-2xl font-bold sm:text-3xl">
               Welcome to eCommerce
@@ -27,14 +27,7 @@ const Login = () => {
               Login to your account to continue shopping
             </p>
           </div>
-          {error && (
-            <div
-              className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 "
-              role="alert"
-            >
-              <span className="font-medium">Danger alert!</span> {message}
-            </div>
-          )}
+         
           <form
             onSubmit={handleLoginSubmit}
             className="mx-auto mb-0 mt-8 max-w-md space-y-4"
@@ -75,7 +68,7 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between space-x-5">
               <p className="text-sm text-gray-500">
                 No account?
                 <Link className="underline mx-1" href={"/signupPage"}>
@@ -91,6 +84,14 @@ const Login = () => {
               </button>
             </div>
           </form>
+          {error && (
+            <div
+              className="p-4 w-[350px] mb-4 text-center flex justify-between text-sm text-red-800 rounded-lg bg-red-50 "
+              role="alert"
+            >
+              {message}
+            </div>
+          )}
         </div>
 
         <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
