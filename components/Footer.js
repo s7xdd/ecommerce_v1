@@ -3,6 +3,7 @@ import { Context } from "@/Context/Context";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
+import Newsletter from "./Newsletter";
 
 const Footer = () => {
   const { user } = useContext(Context);
@@ -52,34 +53,25 @@ const Footer = () => {
           </div>
         </div>
       )}
-      <footer className="bg-white lg:grid lg:grid-cols-5">
-        <div className="relative block h-32 lg:col-span-2 lg:h-full">
-          <Image
-            src="https://images.unsplash.com/photo-1642370324100-324b21fab3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
-            alt="footer"
-            layout="fill"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
-
+      <footer className="bg-white lg:grid lg:grid-cols-3">
         <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            <div>
+          <div className="grid grid-cols-1 text-center gap-8 sm:grid-cols-3">
+            <div className="mx-2">
               <p>
                 <span className="text-xs uppercase tracking-wide text-gray-500">
                   {" "}
-                  Call us{" "}
+                  Store{" "}
                 </span>
 
                 <a
-                  href="#!"
+                  href="tel:971405555555"
                   className="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl"
                 >
-                  0123456789
+                  +971 40 5555555
                 </a>
               </p>
 
-              <ul className="mt-8 flex gap-6">
+              <ul className="mt-5 flex gap-6 justify-center">
                 <li>
                   <a
                     href="https://www.facebook.com"
@@ -180,13 +172,33 @@ const Footer = () => {
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a
-                      href="#!"
+                    <Link
+                      href="/category/Men"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Clothing Style
-                    </a>
+                      Mens
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/category/Women"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {" "}
+                      Women's
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      href="/category/Kids"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {" "}
+                      Kids
+                    </Link>
                   </li>
 
                   <li>
@@ -195,27 +207,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Fashion Design
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#!"
-                      className="text-gray-700 transition hover:opacity-75"
-                    >
-                      {" "}
-                      Design
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#!"
-                      className="text-gray-700 transition hover:opacity-75"
-                    >
-                      {" "}
-                      Branding
+                      Beauty
                     </a>
                   </li>
 
@@ -232,7 +224,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="font-medium text-gray-900">Company</p>
+                <p className="font-medium text-gray-900">Connect with us</p>
 
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
@@ -261,11 +253,25 @@ const Footer = () => {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Accounts Review{" "}
+                      Membership{" "}
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#!"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {" "}
+                      FAQ{" "}
                     </a>
                   </li>
                 </ul>
               </div>
+            </div>
+
+            <div>
+              <Newsletter />
             </div>
           </div>
 
@@ -304,7 +310,7 @@ const Footer = () => {
               </ul>
 
               <p className="mt-8 text-xs text-gray-500 sm:mt-0">
-                &copy; 2024. Clothing Store . All rights reserved.
+                &copy; 2024. Clothing Store. All rights reserved.
               </p>
             </div>
           </div>
