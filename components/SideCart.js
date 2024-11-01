@@ -147,7 +147,7 @@ const SideCart = ({ setIsCartOpen, isCartOpen }) => {
                                                       </h3>
 
                                                       <p className="ml-4">
-                                                        ₹{item?.price}
+                                                        AED {item?.price}
                                                       </p>
                                                     </div>
                                                   </div>
@@ -207,7 +207,7 @@ const SideCart = ({ setIsCartOpen, isCartOpen }) => {
                       {user?.data && (
                         <div className="flex justify-between text-base font-medium text-gray-900">
                           <p>Subtotal</p>
-                          <p>₹ {totalPrice}.00</p>
+                          <p>AED  {totalPrice}.00</p>
                         </div>
                       )}
                       {user?.data && (
