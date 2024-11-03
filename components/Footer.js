@@ -193,7 +193,7 @@ const Footer = () => {
 
                   <li>
                     <Link
-                      href="/category/Kids"
+                      href="/category/kids"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
