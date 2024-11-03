@@ -187,7 +187,7 @@ const Footer = () => {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Women's
+                      Women&apos;s
                     </Link>
                   </li>
 
