@@ -39,7 +39,7 @@ const Login = () => {
 
               <div className="relative">
                 <input
-                  type="email"
+                  type="text"
                   className="w-full rounded-lg border-gray-200 border p-4 pe-12 text-sm shadow-sm"
                   placeholder="test@gmail.com"
                   required
@@ -84,6 +84,11 @@ const Login = () => {
               </button>
             </div>
           </form>
+          <div className="mt-5 border px-7 py-3"> 
+            <h1 className="font-semibold mb-1">Test credentials</h1>
+            <p className="text-sm"><span className="font-medium">username:</span> admin</p>
+            <p className="text-sm"><span className="font-medium">password:</span> admin</p>
+          </div>
           {error && (
             <div
               className="p-4 w-[350px] mb-4 text-center flex justify-between text-sm text-red-800 rounded-lg bg-red-50 "
