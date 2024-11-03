@@ -27,7 +27,7 @@ export const middleware = (request) => {
     }
   } else {
     if (!authToken) {
-      if (path.startsWith("/api") || path === "/dashboard") {
+      if (path.startsWith("/api") || path === "/dashboard" || path === "/checkout") {
         return NextResponse.redirect(new URL("/", request.nextUrl));
       }
     }
